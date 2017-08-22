@@ -1,0 +1,89 @@
+<html>
+<style>
+body{
+background-color:black;
+}
+#header ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+    padding-left:200px;
+}
+
+#header li {
+	display: inline;
+	border-style: solid;
+	border-color:red;
+	border-width: 1px 1px 0 1px;
+	margin: 0 0.5em 0 0;
+    background: pink;
+    padding-bottom: 5px; 
+    padding-top:3px;
+    padding-left:3px;
+    width:100px;
+    }
+
+#header li a {
+	padding: 0 1em;
+}
+
+
+#header li {
+	float: left;
+	border-style: solid;
+	border-bottom-width: 0;
+	margin: 0 0.5em 0 0;
+}
+
+
+h1 {
+	margin: 0;
+	padding: 0 0 1em 0;
+} 
+
+#header #selected {
+	position: relative;
+	top: 1px;
+	background: pink;
+}
+#map { height: 70%; width :50%; margin-left:auto; margin-right:auto;}
+
+</style>
+
+
+<body>
+
+<div id="header" style="padding-top:54px;"> 
+
+
+<ul>
+	<li><a href="signup.html" target="bottom">HOME</a></li>
+	<li id="selected"><a href="aboutus.html" target="bottom">ABOUT</a></li>
+	<li><a href="layout.html" target="bottom">TEACHER</a></li>
+	<li><a href="student.html" target="bottom">STUDENT</a></li>
+	<li><a href="teacherdetails.html" target="bottom">TEACHER</a></li>
+	<li><a href="studentdetails.html" target="bottom">STUDENT</a></li>
+    <li><a href="Requestmeet.html" target="bottom">MEET</a></li>
+    <li><a href="logout.html" target="_parent">LOGOUT</a></li>
+</ul>
+</div>
+
+
+<div id="map"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQM-4J_xeDCz2VpFVLsjXwCJT1fDQS-tA&callback=myMap"></script>
+
+
+</body>
+</html>
